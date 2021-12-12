@@ -1,4 +1,21 @@
-variable "common_tags" {
-  description = "This is to help you add tags to your cloud objects"
-  type        = map(any)
+
+variable "volume" {
+  type = map(any)
+  default = {
+    availability_zone = "us-west-2a"
+    size              = 1
+  }
+}
+
+variable "instance" {
+  type = map(any)
+  default = {
+    ami               = "ami-21f78e11"
+    availability_zone = "us-west-2a"
+    instance_type     = "t2.micro"
+  }
+}
+
+variable "kms_key_id" {
+  type = string
 }

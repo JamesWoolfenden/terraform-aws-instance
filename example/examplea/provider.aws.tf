@@ -3,7 +3,8 @@ provider "aws" {
   default_tags {
 
     tags = {
-    createdby = "Terraform" }
-    module = "terraform-aws-instance"
+      createdby = "Terraform"
+      module    = "terraform-aws-instance"
+    }
   }
 }
