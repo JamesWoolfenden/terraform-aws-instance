@@ -16,16 +16,15 @@ Terraform module to provision infra .
 Creates a static site with cloudfront distribution in front
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -33,27 +32,26 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                           | Type     |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| [aws_ebs_volume.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume)               | resource |
-| [aws_instance.web](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)                       | resource |
+| Name | Type |
+|------|------|
+| [aws_ebs_volume.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume) | resource |
+| [aws_instance.web](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_volume_attachment.ebs_att](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/volume_attachment) | resource |
 
 ## Inputs
 
-| Name                                                            | Description | Type       | Default                                                                                                             | Required |
-| --------------------------------------------------------------- | ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------- | :------: |
-| <a name="input_instance"></a> [instance](#input_instance)       | n/a         | `map(any)` | <pre>{<br> "ami": "ami-21f78e11",<br> "availability_zone": "us-west-2a",<br> "instance_type": "t2.micro"<br>}</pre> |    no    |
-| <a name="input_kms_key_id"></a> [kms_key_id](#input_kms_key_id) | n/a         | `string`   | n/a                                                                                                                 |   yes    |
-| <a name="input_volume"></a> [volume](#input_volume)             | n/a         | `map(any)` | <pre>{<br> "availability_zone": "us-west-2a",<br> "size": 1<br>}</pre>                                              |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_instance"></a> [instance](#input\_instance) | n/a | `map(any)` | <pre>{<br>  "ami": "ami-21f78e11",<br>  "availability_zone": "us-west-2a",<br>  "instance_type": "t2.micro"<br>}</pre> | no |
+| <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | n/a | `string` | n/a | yes |
+| <a name="input_volume"></a> [volume](#input\_volume) | n/a | `map(any)` | <pre>{<br>  "availability_zone": "us-west-2a",<br>  "size": 1<br>}</pre> | no |
 
 ## Outputs
 
-| Name                                                        | Description |
-| ----------------------------------------------------------- | ----------- |
-| <a name="output_instance"></a> [instance](#output_instance) | n/a         |
-| <a name="output_volume"></a> [volume](#output_volume)       | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_instance"></a> [instance](#output\_instance) | n/a |
+| <a name="output_volume"></a> [volume](#output\_volume) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
