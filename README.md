@@ -81,11 +81,15 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DescribeInstanceCreditSpecifications",
                 "ec2:DescribeInstanceTypes",
                 "ec2:DescribeInstances",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeSnapshots",
                 "ec2:DescribeTags",
+                "ec2:DescribeVolumeAttribute",
                 "ec2:DescribeVolumes",
                 "ec2:DetachVolume",
                 "ec2:ModifyInstanceAttribute",
                 "ec2:ModifyVolume",
+                "ec2:ModifyVolumeAttribute",
                 "ec2:MonitorInstances",
                 "ec2:RunInstances",
                 "ec2:StartInstances",
@@ -93,7 +97,20 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:TerminateInstances",
                 "ec2:UnmonitorInstances"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "kms:CreateGrant",
+                "kms:GenerateDataKeyWithoutPlaintext"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
