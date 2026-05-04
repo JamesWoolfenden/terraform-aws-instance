@@ -1,4 +1,3 @@
-
 resource "aws_instance" "web" {
   ami               = var.instance["ami"]
   availability_zone = var.instance["availability_zone"]

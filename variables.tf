@@ -1,4 +1,3 @@
-
 variable "volume" {
   type = map(any)
   default = {
@@ -6,7 +5,6 @@ variable "volume" {
     size              = 1
   }
 }
-
 variable "instance" {
   type = map(any)
   default = {
@@ -15,7 +13,6 @@ variable "instance" {
     instance_type     = "t2.micro"
   }
 }
-
 variable "kms_key_id" {
   type = string
 }
