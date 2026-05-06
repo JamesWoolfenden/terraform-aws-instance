@@ -1,6 +1,6 @@
 # terraform-aws-instance
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-instance/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-instance)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-instance/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-instance)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-instance.svg)](https://github.com/JamesWoolfenden/terraform-aws-instance/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-instance.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-instance/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
@@ -23,8 +23,8 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| ---- | ------- |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.43.0 |
 
 ## Modules
 
@@ -33,7 +33,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_ebs_volume.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ebs_volume) | resource |
 | [aws_instance.web](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_volume_attachment.ebs_att](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/volume_attachment) | resource |
@@ -41,15 +41,15 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_instance"></a> [instance](#input\_instance) | n/a | `map(any)` | <pre>{<br>  "ami": "ami-21f78e11",<br>  "availability_zone": "us-west-2a",<br>  "instance_type": "t2.micro"<br>}</pre> | no |
+| ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_instance"></a> [instance](#input\_instance) | n/a | `map(any)` | <pre>{<br/>  "ami": "ami-21f78e11",<br/>  "availability_zone": "us-west-2a",<br/>  "instance_type": "t2.micro"<br/>}</pre> | no |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | n/a | `string` | n/a | yes |
-| <a name="input_volume"></a> [volume](#input\_volume) | n/a | `map(any)` | <pre>{<br>  "availability_zone": "us-west-2a",<br>  "size": 1<br>}</pre> | no |
+| <a name="input_volume"></a> [volume](#input\_volume) | n/a | `map(any)` | <pre>{<br/>  "availability_zone": "us-west-2a",<br/>  "size": 1<br/>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_instance"></a> [instance](#output\_instance) | n/a |
 | <a name="output_volume"></a> [volume](#output\_volume) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
